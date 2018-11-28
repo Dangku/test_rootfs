@@ -65,7 +65,7 @@ category    = 0
 run_type    = 1
 module_count= 1
 module_path = "/system/vendor/modules/bcmdhd.ko"
-module_args = "nvram_path=/system/vendor/modules/nvram_ap6212.txt"
+module_args = "firmware_path=/system/vendor/modules/fw_bcm43438a1.bin;nvram_path=/system/vendor/modules/nvram_ap6212.txt"
 
 [ethernet]
 display_name= "乙太網"

@@ -1,1 +1,0 @@
-/dragonboard/bin/nvram_ap6255.txt

@@ -22,6 +22,8 @@ wlan_try=0
 
 module_path=`script_fetch "wifi" "module_path"`
 module_args=`script_fetch "wifi" "module_args"`
+module_args=$(echo $module_args | sed 's/;/ /g')
+echo "module_args=$module_args"
 
 if [ -z "$module_path" ]; then
 	SEND_CMD_PIPE_FAIL $3
@@ -30,7 +32,7 @@ fi
 flag="######"
 
 echo "insmod $module_path $module_args"
-insmod "$module_path" "$module_args"
+insmod $module_path $module_args
 if [ $? -ne 0 ]; then
 	SEND_CMD_PIPE_FAIL $3
 	exit 1
