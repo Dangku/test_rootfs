@@ -1,0 +1,1 @@
+/dragonboard/bin/nvram_ap6476.txt
